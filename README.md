@@ -51,9 +51,11 @@
         (let ((lado (read)))
             (* (funcall *calcular_area_cuadrado* lado) altura)))
 )
-'''lisp
+```
 ###Condicionales
 
+
+```lisp
 (format t "Ingresa la longitud de los lados: ")
 (setq lado (read))
 (format t "Ingresa la longitud de la altura: ")
@@ -88,3 +90,50 @@
     (martes (print "Hoy es martes."))
     (miércoles (print "Hoy es miércoles."))
     (otherwise (print "Día desconocido.")))
+```
+
+###CAR CDR
+```lisp
+(quote (+ 2 3))
+'(+ 2 3)
+
+(setq 'a '(1 2 3 4))
+(car a)
+(cdr a)
+(cddr a)
+(cdddr a)
+
+(setq b '((1 2 3 4 5) a b c))
+(caar b)
+(car b)
+(cdr b)
+
+(setq c '(1 2 3 4 (a b c) (d e f)))
+(car c)
+(caar (cddddr c))
+(caar (cddddr (cdr c)))
+(car (cdr (cdr c)))
+```
+
+```prolog
+(Cabeza|Cola) = (1 2 3 4).
+(a b c) = (X Y Z).
+```
+###Arbol genealogico
+```prolog
+padre(Luis, Farid).
+padre(Luis, Jessa).
+madre(Ale, Farid).
+madre(Ale, Jessa).
+
+madre(Ale, Roberto).
+hermano(Roberto, José).
+abuelo(Baldomero, José).
+
+madre(María, Ale).
+abuela(María, Farid).
+abuela(Isaura, Farid).
+
+tia(Lulú, Farid).
+tía(Lulú, Jessa).
+```
